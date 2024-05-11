@@ -7,10 +7,10 @@ import CreateArea from "./components/CreateArea";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  function getNote([title, content]) {
+  //Recibe la nota desde el hijo a manera de obj y por medio de decosntructurin es addicionado
+  function getNote(note) {
     setNotes((prevValues) => {
-      const newObj = { title: title, content: content };
-      return [...prevValues, newObj];
+      return [...prevValues, note];
     });
   }
 
